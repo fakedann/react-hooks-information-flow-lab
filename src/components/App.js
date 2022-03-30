@@ -11,15 +11,26 @@ function App() {
 
   return (
     <div className={"App " + (isDarkMode ? "dark" : "light")}>
-      <header>
+      {/* <header>
         <h2>Shopster</h2>
         <button onClick={handleDarkModeClick}>
           {isDarkMode ? "Dark" : "Light"} Mode
         </button>
-      </header>
+      </header> */}
+      <Header onDarkModeClick={handleDarkModeClick}/>
       <ShoppingList items={itemData} />
     </div>
   );
+}
+
+function Header({onDarkModeClick}){
+  return (
+    <header>
+      <h2>Shopster</h2>
+      <button onClick={onDarkModeClick}>
+        </button>
+    </header>
+  )
 }
 
 export default App;
